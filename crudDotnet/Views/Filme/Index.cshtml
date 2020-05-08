@@ -1,0 +1,64 @@
+﻿@model IEnumerable<crudDotnet.Models.Filme>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adicionar Filme </a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Capa
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Sinopse
+            </th>
+            <th>
+                Lançamento
+            </th>
+            <th>
+                Avaliação
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+        <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.FilmeUrlImg)" width="90" height="120" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmeNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmeSinopse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmeAnoLancamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmeImdb)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FilmeId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.FilmeId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.FilmeId">Apagar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
