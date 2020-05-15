@@ -1,7 +1,7 @@
 # crudDotNet
 Sistema simples de cadastro de filmes utilizando Asp.Net com banco de dados SQLite.
 
-![](/screenshots/cadastroFilmes.jpg.jpg?raw=true)
+![](/screenshots/cadastroFilmes.jpg?raw=true)
 
 ![](/screenshots/listaFilmes.jpg?raw=true)
 
